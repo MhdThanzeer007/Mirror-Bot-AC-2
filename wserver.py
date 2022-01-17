@@ -197,7 +197,7 @@ input[type="submit"]:hover, input[type="submit"]:focus{
 </style>
 </head>
 <body>
-  <!--© Designed and coded by @bipuldey19-Telegram-->
+  <!--© Designed and coded by @mhd_thanzeer-Telegram-->
     <header>
       <div class="brand">
         <img
@@ -209,8 +209,8 @@ input[type="submit"]:hover, input[type="submit"]:focus{
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
+        <a href="https://t.me/mhd_thanzeer"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/mhd_thanzeer"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
@@ -573,20 +573,20 @@ section span{
     </style>
   </head>
 <body>
-   <!--© Designed and coded by @bipuldey19-Telegram-->
+   <!--© Designed and coded by @mhd_thanzeer-Telegram-->
     <header>
       <div class="brand">
         <img
           src="https://telegra.ph/file/cc06d0c613491080cc174.png"
           alt="logo"
         />
-        <a href="https://t.me/anas_tayyar">
+        <a href="https://t.me/mhd_thanzeer">
           <h2 class="name">Qbittorrent Selection</h2>
         </a>
       </div>
       <div class="social">
-        <a href="https://www.github.com/anasty17/mirror-leech-telegram-bot"><i class="fab fa-github"></i></a>
-        <a href="https://t.me/anas_tayyar"><i class="fab fa-telegram"></i></a>
+        <a href="https://t.me/mhd_thanzeer"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/mhd_thanzeer"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
     <section>
@@ -736,7 +736,7 @@ async def set_priority(request):
 @routes.get('/')
 async def homepage(request):
 
-    return web.Response(text="<h1>See mirror-leech-telegram-bot <a href='https://www.github.com/anasty17/mirror-leech-telegram-bot'>@GitHub</a> By <a href='https://github.com/anasty17'>Anas</a></h1>", content_type="text/html")
+    return web.Response(text="<h1>See mirror-leech-telegram-bot <a href='https://t.me/mhd_thanzeer'𝗠𝗛𝗗_𝗧𝗛𝗔𝗡𝗭𝗘𝗘𝗥</a> By <a href='https://t.me/mhd_thanzeer'>𝗠𝗛𝗗_𝗧𝗛𝗔𝗡𝗭𝗘𝗘𝗥</a></h1>", content_type="text/html")
 
 async def e404_middleware(app, handler):
 
