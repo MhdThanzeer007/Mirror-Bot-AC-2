@@ -234,7 +234,7 @@ class MirrorListener:
 
         with download_dict_lock:
             msg = f'<b>📂 Name: </b><code>{download_dict[self.uid].name()}</code>\n\n<b>💽 Size: </b>{size}'
-            msg += f'\n<b>📝 Type: </b>{typ} \n <b>👨‍🔬 Powered By : <a href='https://t.me/mhd_thanzeer'>𝙈𝙃𝘿 𝙏𝙃𝘼𝙉𝙕𝙀𝙀𝙍</a></b>'
+            msg += f'\n<b>📝 Type: </b>{typ} \n <b>👨‍🔬 Powered By : [𝙈𝙃𝘿 𝙏𝙃𝘼𝙉𝙕𝙀𝙀𝙍](https://t.me/mhd_thanzeer)</b>'
             if ospath.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{download_dict[self.uid].name()}'):
                 msg += f'\n<b>🗃️ SubFolders: </b>{folders}'
                 msg += f'\n<b>📂 Files: </b>{files}'
