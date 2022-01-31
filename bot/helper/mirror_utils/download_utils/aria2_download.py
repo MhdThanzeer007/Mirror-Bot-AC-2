@@ -30,7 +30,7 @@ def __onDownloadStarted(api, gid):
                         return api.remove([download], force=True, files=True)
                 smsg, button = GoogleDriveHelper().drive_list(sname, True)
                 if smsg:
-                    dl.getListener().onDownloadError('<b>File Or Folder If Already In Drive...</b>\n\n')
+                    dl.getListener().onDownloadError('File Or Folder If Already In Drive...\n\n')
                     api.remove([download], force=True, files=True)
                     return sendMarkup("<b>Here Are The Search Results:</b>", dl.getListener().bot, dl.getListener().update, button)
             if dl is not None and (ZIP_UNZIP_LIMIT is not None or TORRENT_DIRECT_LIMIT is not None):
