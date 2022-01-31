@@ -209,8 +209,8 @@ class MirrorListener:
                     update_all_messages()
             count = len(files)
             msg = f'<b>📂 Name : </b><code>{link}</code>\n\n'
-            msg += f'<b>💽 Size : {get_readable_file_size(size)}</b>\n\n'
-            msg += f'<b>🗃️ Total Files : {count}</b>'
+            msg += f'<b>💽 Size : {get_readable_file_size(size)}</b>\n'
+            msg += f'<b>🗃️ Total Files : {count}</b>\n'
             if typ != 0:
                 msg += f'\n<b>Corrupted Files: </b>{typ}'
             if self.message.chat.type == 'private':
