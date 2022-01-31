@@ -26,7 +26,7 @@ def add_gd_download(link: str, listener, gdtot):
                 return sendMessage("Not any valid archive.", listener.bot, listener.update)
         gmsg, button = GoogleDriveHelper().drive_list(gname, True)
         if gmsg:
-            msg = "<b>File Or Folder If Already In Drive.\nHere Are The Search Results:"
+            msg = "<b>File Or Folder If Already In Drive.</b>\n<b>Here Are The Search Results:</b>"
             return sendMarkup(msg, listener.bot, listener.update, button)
     if ZIP_UNZIP_LIMIT is not None:
         LOGGER.info('Checking File Or Folder Size...')
