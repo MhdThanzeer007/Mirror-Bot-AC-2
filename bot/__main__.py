@@ -62,8 +62,8 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Help 🤧", "tg://settings")
-    buttons.buildbutton("Contact ✨️", "https://t.me/mhd_thanzeer")
+    buttons.buildbutton("❣️ Help", "tg://settings")
+    buttons.buildbutton("Onwer ✨️", "https://t.me/mhd_thanzeer")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
@@ -72,7 +72,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
-        sendMarkup('<b>You Are Not Authorized User,</b>', context.bot, update, reply_markup)
+        sendMarkup('<b>Hey Bitch You Are Not Authorized User, But You Want Access Me In PM Now You Can Pay\n Payment Details 👇\n\n 👉 One Week : 50 ₹ \n👉 One Month : 150 ₹ \n\n Do You Want This Feature Now You Can Contact Me : @mhd_thanzeer 💖</b>', context.bot, update, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update)
@@ -250,11 +250,11 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("Restarted successfully! ✅️", chat_id, msg_id)
+        bot.edit_message_text("<b>Bot Restarted Successfully! ✅️ Now You Can Use Me ❣️</b>", chat_id, msg_id)
         osremove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted! ✅️\n\n by : @mhd_thanzeer ✨️</b>"
+            text = "<b>Bot Restarted Successfully! ✅️\nNow You Can Use Me 😃\n\n👮‍♂ Developer 1 : @mhd_thanzeer\n👮‍♂ Developer 2 : @AnandhuKuttu  </b>"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
