@@ -46,18 +46,18 @@ def cloneNode(update, context):
         if res != "":
             return sendMessage(res, context.bot, update)
         if STOP_DUPLICATE:
-            LOGGER.info('Checking File/Folder if already in Drive...')
+            LOGGER.info('Checking File Or Folder If Already In Drive...')
             smsg, button = gd.drive_list(name, True, True)
             if smsg:
-                msg3 = "File/Folder is already available in Drive.\nHere are the search results:"
+                msg3 = "<b>File Or Folder Is Already In Drive.\nHere Are The Search Results:</b>"
                 sendMarkup(msg3, context.bot, update, button)
                 if gdtot_link:
                     gd.deletefile(link)
                 return
         if CLONE_LIMIT is not None:
-            LOGGER.info('Checking File/Folder Size...')
+            LOGGER.info('Checking File Or Folder Size...')
             if size > CLONE_LIMIT * 1024**3:
-                msg2 = f'Failed, Clone limit is {CLONE_LIMIT}GB.\nYour File/Folder size is {get_readable_file_size(size)}.'
+                msg2 = f'Failed, Clone limit is {CLONE_LIMIT}GB.\nYour File Or Folder Size Is {get_readable_file_size(size)}.'
                 return sendMessage(msg2, context.bot, update)
         if files <= 10:
             msg = sendMessage(f"Cloning: <code>{link}</code>", context.bot, update)
