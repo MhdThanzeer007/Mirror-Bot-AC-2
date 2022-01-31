@@ -16,7 +16,7 @@ def add_gd_download(link: str, listener, gdtot):
         sendMessage(res, listener.bot, listener.update)
         return
     if STOP_DUPLICATE and not listener.isLeech:
-        LOGGER.info('Checking File/Folder if already in Drive...')
+        LOGGER.info('Checking File Or Folder If Already In Drive...')
         if listener.isZip:
             gname = name + ".zip"
         elif listener.extract:
@@ -26,12 +26,12 @@ def add_gd_download(link: str, listener, gdtot):
                 return sendMessage("Not any valid archive.", listener.bot, listener.update)
         gmsg, button = GoogleDriveHelper().drive_list(gname, True)
         if gmsg:
-            msg = "File/Folder is already available in Drive.\nHere are the search results:"
+            msg = "<b>File Or Folder If Already In Drive.\nHere Are The Search Results:"
             return sendMarkup(msg, listener.bot, listener.update, button)
     if ZIP_UNZIP_LIMIT is not None:
-        LOGGER.info('Checking File/Folder Size...')
+        LOGGER.info('Checking File Or Folder Size...')
         if size > ZIP_UNZIP_LIMIT * 1024**3:
-            msg = f'Failed, Zip/Unzip limit is {ZIP_UNZIP_LIMIT}GB.\nYour File/Folder size is {get_readable_file_size(size)}.'
+            msg = f'Failed, Zip/Unzip limit is {ZIP_UNZIP_LIMIT}GB.\nYour File Or Folder Size Is {get_readable_file_size(size)}.'
             return sendMessage(msg, listener.bot, listener.update)
     LOGGER.info(f"Download Name: {name}")
     drive = GoogleDriveHelper(name, listener)
