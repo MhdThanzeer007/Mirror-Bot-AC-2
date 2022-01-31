@@ -101,16 +101,16 @@ class TelegramDownloadHelper:
 
             if download:
                 if STOP_DUPLICATE and not self.__listener.isLeech:
-                    LOGGER.info('Checking File/Folder if already in Drive...')
+                    LOGGER.info('File Or Folder If Already In Drive...')
                     smsg, button = GoogleDriveHelper().drive_list(name, True, True)
                     if smsg:
-                        msg = "File/Folder is already available in Drive.\nHere are the search results:"
+                        msg = "<b>File Or Folder Is Already Available In Drive.\n Here Are The Search Results:</b>"
                         return sendMarkup(msg, self.__listener.bot, self.__listener.update, button)
                 self.__onDownloadStart(name, media.file_size, media.file_id)
                 LOGGER.info(f'Downloading Telegram file with id: {media.file_id}')
                 Thread(target=self.__download, args=(_message, path)).start()
             else:
-                self.__onDownloadError('File already being downloaded!')
+                self.__onDownloadError('File Already Being Downloaded!')
         else:
             self.__onDownloadError('No document in the replied message')
 
