@@ -250,11 +250,11 @@ def main():
     if ospath.isfile(".restartmsg"):
         with open(".restartmsg") as f:
             chat_id, msg_id = map(int, f)
-        bot.edit_message_text("<b>Bot Restarted Successfully! ✅️ Now You Can Use Me ❣️</b>", chat_id, msg_id)
+        bot.edit_message_text("<b>Bot Restarted Successfully! ✅️\nNow You Can Use Me 😃\n\n👮‍♂ Developer 1 : @mhd_thanzeer\n👮‍♂ Developer 2 : @AnandhuKuttu</b>", chat_id, msg_id)
         osremove(".restartmsg")
     elif OWNER_ID:
         try:
-            text = "<b>Bot Restarted Successfully! ✅️\nNow You Can Use Me 😃\n\n👮‍♂ Developer 1 : @mhd_thanzeer\n👮‍♂ Developer 2 : @AnandhuKuttu  </b>"
+            text = "<b>Bot Restarted Successfully! ✅️\nNow You Can Use Me 😃\n\n👮‍♂ Developer 1 : @mhd_thanzeer\n👮‍♂ Developer 2 : @AnandhuKuttu</b>"
             bot.sendMessage(chat_id=OWNER_ID, text=text, parse_mode=ParseMode.HTML)
             if AUTHORIZED_CHATS:
                 for i in AUTHORIZED_CHATS:
